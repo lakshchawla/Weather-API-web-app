@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather project</title>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+        * {
+            /* background-color: rgb(51, 51, 51); */
+            font-family: 'Mate SC', serif;
+        }
+        
+        body {
+            background-image: url('images.jpg');
+            /* -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -moz-background-size: cover; */
+            background-size: cover;
+        }
+        
+        .__Header {
+            background-color: rgb(51, 51, 51);
+        }
+        
+        .navBar {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .logo {
+            font-weight: 500;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            margin-left: 0;
+        }
+        
+        .Links {
+            font-family: 'Mate SC', serif;
+            font-weight: 500;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%
+        }
+        
+        .nav__links {
+            list-style: none;
+        }
+        
+        .nav__links li {
+            display: inline-block;
+            padding: 0px 20px;
+            border: 2px solid white;
+            border-radius: 15px;
+        }
+        /* 
+.nav__links li a {
+    transition: all ease 0s;
+} */
+        
+        .nav__links li:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        .nav__links li a:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        .WorkArea {
+            background-color: white;
+            width: 600px;
+            height: max-content;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 5%;
+            padding: 20px;
+        }
+        
+        .contentHead {
+            text-align: center;
+            font-family: 'Mate SC', serif;
+            margin-bottom: 50px;
+        }
+        
+        .formInput {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            /* border: 1px solid black; */
+        }
+        
+        #cityInput {
+            display: inline;
+            border: 0;
+            border-bottom: 2px solid black;
+            font-size: large;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 80%;
+            padding-top: 25px;
+        }
+        
+        #SubmitBtn {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            width: 80px;
+            background-color: rgb(51, 51, 51);
+            color: white;
+            padding: 15px 30px 15px 30px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: large;
+            cursor: pointer;
+        }
+        /* 
+#SubmitBtn:hover {
+    pointer
+} */
+    </style>
+</head>
+
+<body>
+    <div class="__Header">
+        <header class="navBar">
+            <h1 class="logo">Weather Project</h1>
+
+            <nav>
+                <ul class="nav__links">
+                    <li class="Links"><a class="Links" href="#">services</a></li>
+                    <li class="Links"><a class="Links" href="#">projects</a></li>
+                    <li class="Links"><a class="Links" href="#">about</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="WorkArea">
+        <div class="JumboTron">
+            <h1 class="contentHead">
+                Weather Project
+            </h1>
+
+            <div class="formInput">
+                <form action="/" method="post">
+                    <label for="cityInput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <path
+                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg>
+                    </label>
+
+
+                    <input type="text" id="cityInput" name="cityName" placeholder="City Name">
+                    <button type="submit" id="SubmitBtn">Go</button>
+                </form>
+            </div>
+
+            <div class="__Result">
+                <h2 id="cityOutput"></h2>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
